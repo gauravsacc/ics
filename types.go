@@ -169,7 +169,7 @@ func (d *DateTime) decode(params map[string]string, data string) error {
 // standardizeTimezone translates CLDR timezone IDs to IANA ones.
 func standardizeTimezone(timezone string) string {
 	// See http://cldr.unicode.org/
-	if standardized, ok := commonLocaleDataRepositoryTranslator[timezone]; ok {
+	if standardized, ok := CommonLocaleDataRepositoryTranslator[timezone]; ok {
 		return standardized
 	}
 	return timezone
